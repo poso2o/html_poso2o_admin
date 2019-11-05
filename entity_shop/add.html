@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>创建实体店铺</title>
+		<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="/js/main.js"></script>
+	</head>
+
+	<body>
+
+		<section>
+			<p>1、创建实体店铺</p>
+			
+			<p><input type="text" name="shop_id" id="shop_id" placeholder="shop_id"></p>
+			<p><input type="text" name="shop_name" id="shop_name" placeholder="shop_name"></p>
+			<p><input type="text" name="source_id" id="source_id" placeholder="source_id"></p>
+			<p><input type="text" name="source_name" id="source_name" placeholder="source_name"></p>
+			<p><input type="text" name="wangwang" id="wangwang" placeholder="wangwang"></p>
+			<p><input type="text" name="order_id" id="order_id" placeholder="order_id"></p>
+			<p><input type="text" name="shop_version_id" id="shop_version_id" placeholder="shop_version_id"></p>
+			<p><input type="text" name="shop_version_name" id="shop_version_name" placeholder="shop_version_name"></p>
+			<p><input type="text" name="shop_state" id="shop_state" placeholder="shop_state"></p>
+			<p><input type="text" name="audit_user_id" id="audit_user_id" placeholder="audit_user_id"></p>
+			<p><input type="text" name="audit_date" id="audit_date" placeholder="audit_date"></p>
+			<p><input type="text" name="audit_state" id="audit_state" placeholder="audit_state"></p>
+			<p><input type="text" name="contacts" id="contacts" placeholder="contacts"></p>
+			<p><input type="text" name="contacts_mobile" id="contacts_mobile" placeholder="contacts_mobile"></p>
+			<p><input type="text" name="order_amount" id="order_amount" placeholder="order_amount"></p>
+			<p><input type="text" name="user_id" id="user_id" placeholder="user_id"></p>
+			<p><input type="text" name="service_costs" id="service_costs" placeholder="service_costs"></p>
+			<p><input type="text" name="shop_package_id" id="shop_package_id" placeholder="shop_package_id"></p>
+			<p><input type="text" name="shop_package_name" id="shop_package_name" placeholder="shop_package_name"></p>
+			<p><input type="text" name="build_date" id="build_date" placeholder="build_date"></p>
+			
+			
+			<p><button id="registerBtn" onClick="javascript:to_add();">创建</button></p>
+
+			<p id="reture_json"></p>
+		</section>
+
+		<script type="text/javascript">
+			var user_data = localStorage.getItem("poso2o_admin_user_data");
+			console.log("user_data=" + user_data);
+			if(user_data == "" || user_data === null) {
+				alert("请先登录！");
+			}
+			user_data = JSON.parse(user_data);
+			$("#user_id").val(user_data.user_id);
+			$("#token").val(user_data.token);
+			/**
+			 * 创建权限
+			 */
+			function to_add() {
+				var self = this;
+				var templateData = {};
+				
+				templateData.user_id = user_data.user_id;
+				templateData.token = user_data.token;
+				
+				// 店铺ID
+				templateData.shop_id = $("#shop_id").val();
+
+				// 店铺名称
+				templateData.shop_name = $("#shop_name").val();
+
+				// 来源ID
+				templateData.source_id = $("#source_id").val();
+
+				// 来源名称
+				templateData.source_name = $("#source_name").val();
+
+				// 旺旺号
+				templateData.wangwang = $("#wangwang").val();
+
+				// 订单号
+				templateData.order_id = $("#order_id").val();
+
+				// 来源ID
+				templateData.shop_version_id = $("#shop_version_id").val();
+
+				// 来源名称
+				templateData.shop_version_name = $("#shop_version_name").val();
+
+				// 店铺状态1=正常，0=停用
+				//templateData.shop_state = $("#shop_state").val();
+
+				// 审核用户ID
+				//templateData.audit_user_id = $("#audit_user_id").val();
+
+				// 审核时间
+				//templateData.audit_date = $("#audit_date").val();
+
+				// 审核结果1=正常，0=停用
+				//templateData.audit_state  = $("#audit_state").val();
+
+				// 联系人
+				templateData.contacts = $("#contacts").val();
+
+				// 联系人手机号
+				templateData.contacts_mobile = $("#contacts_mobile").val();
+
+				// 订单金额
+				templateData.order_amount = $("#order_amount").val();
+
+				// 申请用户ID
+				//templateData.user_id = $("#user_id").val();
+
+				// 订单金额
+				templateData.service_costs = $("#service_costs").val();
+
+				// 套餐ID
+				templateData.shop_package_id = $("#shop_package_id").val();
+
+				// 套餐名称
+				templateData.shop_package_name = $("#shop_package_name").val();
+
+				// 建档时间
+				//templateData.build_date = $("#build_date").val();
+
+				var paramJson = jQuery.param(templateData);
+				$.ajax({
+					type: "POST",
+					cache: false,
+					dataType: "json",
+					url: POS.service_url + "api/EntityShopManage/add",
+					data: paramJson,
+					timeout: 20000,
+					success: function(datas) {
+						$("#reture_json").html("" + JSON.stringify(datas));
+						console.log("datas===" + JSON.stringify(datas));
+						if(datas == "") {
+							alert("服务器出错啦");
+							return false;
+						}
+						if(datas.code.indexOf("success") != -1) {
+							alert("创建权限成功！");
+						} else {
+							alert(datas.msg);
+						}
+					},
+					error: function() {
+						alert("请确保当前网络畅通");
+					}
+				}).always(function() {})
+			}
+		</script>
+
+	</body>
+
+</html>

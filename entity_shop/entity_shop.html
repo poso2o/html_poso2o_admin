@@ -1,0 +1,342 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<title>实体店</title>  
+
+<link rel="stylesheet" href="../style/css/master.css" />
+<link rel="stylesheet" href="entity_shop.css">
+
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.json-2.3.js"></script>
+<script type="text/javascript" src="../js/main.js?v=1001"></script>
+
+<script type="text/javascript" src="entity_shop.js?v=1001"></script>
+
+</head>
+<body>
+
+
+<!-- S containerArea -->
+<div class="containerArea clearfix">
+
+<!-- S rightArea -->
+<div class="rightArea">
+
+<style type="text/css">
+
+</style>
+<div class="main_area">
+
+<div class="main_head clearfix">
+
+<div class="searchArea clearfix">
+
+<div class="list"><label>时间</label><span class="combox dropDownBox" style="width:160px" bindtap="search_dat"><input class="comboxText" type="text" style="width:126px" readonly value="最近一年" comboxval=""><span class="comboxArrow"></span><div class="pannel hideDiv" style="width:160px;"><ul class="search_dat_list"><li><a comboxval="" default="最近一年" href="javascript:void(0);">最近一年</a></li></ul></div></span></div>
+
+<div class="CA_Area" style="float:left;">
+
+<div class="list">
+<label>地区</label><span class="combox CA_p dropDownBox" style="width:160px"><input class="comboxText" type="text" style="width:126px" readonly value="请选择省份" comboxval=""><span class="comboxArrow"></span><div class="pannel hideDiv" style="width:160px;"><ul class="CA_p_lists"></ul></div></span>
+
+</div>
+<div class="list">
+
+<span class="combox CA_c dropDownBox" style="width:160px"><input class="comboxText" type="text" style="width:126px" readonly value="请选择城市" comboxval=""><span class="comboxArrow"></span><div class="pannel hideDiv" style="width:160px;"><ul class="CA_c_lists"></ul></div></span>
+
+</div>
+
+</div>
+
+<div class="list shopBoxList"><label>级别</label><span class="combox datBox dropDownBox" style="width:160px"><input class="comboxText" type="text" style="width:126px" readonly value="全部" comboxval=""><span class="comboxArrow"></span><div class="pannel hideDiv" style="width:160px;"><ul class="datList"><li><a comboxval="" default="全部" href="javascript:void(0);">全部</a></li></ul></div></span></div>
+
+<div class="list shopBoxList"><label>业务组</label><span class="combox datBox dropDownBox" style="width:160px"><input class="comboxText" type="text" style="width:126px" readonly value="全部" comboxval=""><span class="comboxArrow"></span><div class="pannel hideDiv" style="width:160px;"><ul class="datList"><li><a comboxval="" default="全部" href="javascript:void(0);">全部</a></li></ul></div></span></div>
+
+<div class="list shopBoxList"><label>业务员</label><span class="combox datBox dropDownBox" style="width:160px"><input class="comboxText" type="text" style="width:126px" readonly value="全部" comboxval=""><span class="comboxArrow"></span><div class="pannel hideDiv" style="width:160px;"><ul class="datList"><li><a comboxval="" default="全部" href="javascript:void(0);">全部</a></li></ul></div></span></div>
+
+<div class="list shopBoxList"><label>版本</label><span class="combox datBox dropDownBox" style="width:160px"><input class="comboxText" type="text" style="width:126px" readonly value="全部" comboxval=""><span class="comboxArrow"></span><div class="pannel hideDiv" style="width:160px;"><ul class="datList"><li><a comboxval="" default="全部" href="javascript:void(0);">全部</a></li></ul></div></span></div>
+
+<div class="list frm_radio_list">
+<label>服务</label>
+<label class="frm_radio_label selected" style="padding:0px;">
+<i class="icon_radio"></i>
+<span type="label_content">未开通</span>
+</label>
+<label class="frm_radio_label" style="padding:0px;">
+<i class="icon_radio"></i>
+<span type="label_content">已开通</span>
+</label>
+<label class="frm_radio_label" style="padding:0px;">
+<i class="icon_radio"></i>
+<span type="label_content">待审核</span>
+</label>
+<label class="frm_radio_label" style="padding:0px;">
+<i class="icon_radio"></i>
+<span type="label_content">资质不符</span>
+</label>
+<label class="frm_radio_label" style="padding:0px;">
+<i class="icon_radio"></i>
+<span type="label_content">全部</span>
+</label>
+</div>
+
+<div class="list positionList" style="margin-left:10px;">
+<input type="text" maxlength="30" value="" name="keywords" class="inputText keywords" placeholder="查找">
+<a class="del_btn" href="javascript:;" style="display:none;"><i></i>&nbsp;</a>
+<a class="btn keywords_btn" href="javascript:void(0);">&nbsp;</a>
+</div>
+
+</div>
+
+<div class="clearfix"></div>
+
+</div>
+
+<div class="main_body">
+
+<style type="text/css">
+.setTable{
+	width:100%;
+	font-size:14px;
+	background-color:#fff;
+	text-align:center;
+	border:1px solid #e7e7eb;
+	border-spacing:0;
+	table-layout:fixed;
+}
+.setTable thead {
+    background-color: #f4f5f9;
+}
+.setTable thead th{
+    padding:0;
+	font-weight:400;
+	font-style:normal;
+	line-height:40px;
+	border-bottom:1px solid #e7e7eb;
+}
+.setTable tbody{	
+}
+.setTable tbody tr{
+	padding:0;
+	font-weight:400;
+	font-style:normal;
+	line-height:40px;
+	border-bottom:1px solid #e7e7eb;
+}
+.setTable tbody td{
+    padding-bottom:8px;
+    padding-top:8px;
+    text-align:center;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.clothingTable td{
+	border:1px solid #e7e7eb;
+}
+.setTable tfoot{	
+}
+.setTable tfoot tr{
+	padding:0;
+	font-weight:400;
+	font-style:normal;
+	line-height:40px;
+	border-bottom:1px solid #e7e7eb;
+}
+.setTable tbody tr.bgli {
+    background-color:#fbfbfb!important;
+}
+.setTable  tbody tr.hoverbg, .setTable  tbody tr:hover{
+    background-color: #f4fffd!important;
+}
+.setTable td.nameTD{
+	white-space:normal;
+	overflow:inherit;
+	text-overflow:normal;
+	padding-bottom:4px;
+    padding-top:4px;
+	/*border-right:1px solid #e7e7eb;*/
+}
+.setTable .nameDiv{
+	display:block;
+	width:100%;
+	position:relative;
+}
+.setTable .nameDiv img{
+	position:absolute;
+	top:4px;
+	left:4px;
+	display:block;
+}
+.setTable .nameDiv p{
+	padding-left:40px;
+	text-align:left;
+	min-height:38px;
+	line-height:16px;
+}
+.setTable .nameDiv em{
+	display:block;
+	width:100%;
+	text-align:left;
+}
+.setTable .bhDiv em{
+	display:block;
+	text-align:center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height:18px;
+}
+.setTable .colorTd em{
+	display:block;
+	text-align:center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height:18px;
+}
+.setTable .frm_checkbox_label, .setTable .frm_checkbox_label .icon_checkbox{
+	margin:0;
+}
+</style>
+<style type="text/css">
+.main_body .setTable th i{
+	background: url(http://style1.buyinchina.com/img/bic.gif) no-repeat 0 -364px;
+	display: inline-block;
+    height: 8px;
+    overflow: hidden;
+    width: 7px;
+	margin-left:4px;
+	margin-top:3px;
+}
+.main_body .setTable th a:hover, .main_body .setTable .current{
+	color:#44b549;
+}
+.main_body .setTable th a:hover i, .main_body .setTable .current i{
+	background-position:right -364px;
+}
+.main_body .setTable th .order-desc i{
+	background-position:right -364px!important;
+}
+.main_body .setTable th .order-desc a:hover i{
+	background-position:right -364px!important;
+}
+.main_body .setTable th .order-asc i{
+	background-position:right -356px!important;
+}
+.main_body .setTable th .order-asc a:hover i{
+	background-position:right -356px!important;
+}
+</style>
+<table class="setTable clothingTable">
+<thead>
+<tr>
+<th width="4%">序号</th>
+<th width="*">品名</th>
+<th width="10%">货号/条码</th>
+<th width="8%">规格</th>
+<th width="7%">吊牌价</th>
+<th width="6%"><a order="num_add" class="order_search" href="javascript:void(0);">入仓<i></i></a></th>
+<th width="6%"><a order="num_sales" class="order_search" href="javascript:void(0);">销售<i></i></a></th>
+<th width="6%"><a order="num_booking" class="order_search" href="javascript:void(0);">调拨<i></i></a></th>
+<th width="6%"><a order="num_back" class="order_search" href="javascript:void(0);">退货<i></i></a></th>
+<th width="6%"><a order="num_bug" class="order_search" href="javascript:void(0);">报损<i></i></a></th>
+<th width="6%"><a order="num_update" class="order_search" href="javascript:void(0);">差异<i></i></a></th>
+<th width="6%"><a order="num" class="order_search" href="javascript:void(0);">结存<i></i></a></th>
+<th width="8%">库存金额</th>
+<th width="5%">操作</th>
+</tr>
+</thead>
+<tbody>
+<td colspan="14">正在加载...</td>
+</tbody>
+<tfoot>
+<tr>
+<td colspan="10">合计</td>
+<td class="total_num_update">0</td>
+<td class="nums">0</td>
+<td class="total_famount">0</td>
+<td>-</td>
+</tr>
+</tfoot>
+</table>
+
+<style type="text/css">
+.js_pagebar{
+	float:right;
+	width:60%;
+}
+.js_pagebar .pagination{
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:0px;
+	padding-right:0px;
+}
+</style>
+<div class="js_pagebar clearfix" style="display:none;">
+<div class="pagination">
+<span class="page_nav_area">
+<a class="btn page_first" href="javascript:void(0);" style="display: none;"></a>
+<a class="btn page_prev" href="javascript:void(0);" style="display: none;"><i class="arrow"></i></a>
+<span class="page_num">
+<label>1</label>
+<span class="num_gap">/</span>
+<label>2</label>
+</span>
+<a class="btn page_next" href="javascript:void(0);"><i class="arrow"></i></a>
+<a class="btn page_last" href="javascript:void(0);" style="display: none;"></a>            
+</span>
+<span class="goto_area">
+<input type="text">
+<a class="btn page_go" href="javascript:void(0);">跳转</a>
+</span>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+<!-- E rightArea -->
+
+</div>
+<!-- E containerArea -->
+
+<script type="text/javascript">
+	
+	
+	(function () {
+  var __timeout;
+  var __lastTap = 0;
+  var hell = function hell() {
+    var hell = document.getElementById('hell');
+    if (hell) {
+      hell.parentNode.removeChild(hell);
+    } else {
+      var style = document.createElement('style');
+      style.id = 'hell';
+      style.textContent = "body{ background:black; -webkit-transform: scale(-1,1); -ms-transform: scale(-1,1); transform: scale(-1,1); -webkit-filter: sepia(0) saturate(0) invert(1) brightness(1) contrast(1); filter: sepia(0) saturate(0) invert(1) brightness(1) contrast(1); }";
+      document.head.appendChild(style);
+    }
+  };
+  document.addEventListener('dblclick', hell, false);
+  document.addEventListener('touchend', function () {
+    var currentTime = new Date().getTime();
+    var tapLength = currentTime - __lastTap;
+    clearTimeout(__timeout);
+    if (tapLength < 500 && tapLength > 0) {
+      hell();
+    }
+    __lastTap = currentTime;
+  });
+})();
+	
+</script>
+
+</body>
+</html>

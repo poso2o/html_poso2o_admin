@@ -1,0 +1,831 @@
+
+.containerArea{
+	margin:0 auto;
+	width:100%;
+	min-width:930px;
+	min-height:450px;
+	position:relative;
+	border-top:1px solid #e7e7eb;
+	border-bottom:1px solid #e7e7eb;
+	margin-bottom:50px;
+}
+
+.navList{
+	background:#f8f8f8 url(http://www.poso2o.com/WeChat/style/img/navList_bg.jpg) repeat-y 197px 0px;
+	width:198px;
+	height:100%;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.navList li{
+	display:block;
+	border-bottom:1px solid #e7e7eb;
+	border-right:1px solid #e7e7eb;
+	text-align:center;
+}
+.navList li a{
+	display:block;
+	line-height:52px;
+	font-size:16px;
+}
+.navList li.current{
+	background:#FFF;
+	border-right:1px solid #FFF;
+}
+.navList li.current a{
+	color: #44b549;
+}
+
+.rightArea{
+	float:right;
+	width:100%;
+}
+
+.main_area{
+	padding-left:198px;
+}
+.main_area .main_head{
+	padding-top:8px;
+	margin-left:8px;
+	margin-right:8px;
+	border-bottom:1px solid #e7e7eb;
+	margin-bottom:10px;
+}
+.main_area .main_head .title{
+	line-height:36px;
+	font-size:16px;
+}
+.main_body{
+	padding-bottom:20px;
+	/*margin:0 auto;
+	width:650px;*/
+	
+	padding-top:8px;
+	margin-left:8px;
+	margin-right:8px;
+}
+
+.main_head .searchArea{
+	float:left;
+}
+.main_head .searchArea .list{
+	float:left;
+	margin-bottom:10px;
+}
+.main_head .searchArea .list label{
+	padding-left:16px;
+}
+.main_head .searchArea .positionList{
+	padding-bottom:0;
+}
+
+.setTable{
+	width:100%;
+	font-size:14px;
+	background-color:#fff;
+	text-align:center;
+	border:1px solid #e7e7eb;
+	border-spacing:0;
+	table-layout:fixed;
+}
+.setTable thead {
+    background-color: #f4f5f9;
+}
+.setTable thead th{
+    padding:0;
+	font-weight:400;
+	font-style:normal;
+	line-height:40px;
+	border-bottom:1px solid #e7e7eb;
+}
+.setTable tbody{	
+}
+.setTable tbody tr{
+	padding:0;
+	font-weight:400;
+	font-style:normal;
+	line-height:40px;
+	border-bottom:1px solid #e7e7eb;
+}
+.setTable tbody td{
+    padding-bottom:8px;
+    padding-top:8px;
+    text-align:center;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}
+.clothingTable td{
+	border:1px solid #e7e7eb;
+}
+.setTable tfoot{
+    background-color: #f4f5f9;
+}
+.setTable tfoot tr{
+	padding:0;
+	font-weight:400;
+	font-style:normal;
+	line-height:40px;
+	border-bottom:1px solid #e7e7eb;
+}
+.setTable tbody tr.bgli {
+    background-color:#fbfbfb!important;
+}
+.setTable  tbody tr.hoverbg, .setTable  tbody tr:hover{
+    background-color: #f4fffd!important;
+}
+.setTable td.nameTD{
+	white-space:normal;
+	overflow:inherit;
+	text-overflow:normal;
+	padding-bottom:4px;
+    padding-top:4px;
+	/*border-right:1px solid #e7e7eb;*/
+}
+.setTable .nameDiv{
+	display:block;
+	width:100%;
+	position:relative;
+}
+.setTable .nameDiv img{
+	position:absolute;
+	top:4px;
+	left:4px;
+	display:block;
+}
+.setTable .nameDiv p{
+	padding-left:40px;
+	text-align:left;
+	min-height:38px;
+	line-height:16px;
+}
+.setTable .nameDiv em{
+	display:block;
+	width:100%;
+	text-align:left;
+}
+.setTable .bhDiv em{
+	display:block;
+	text-align:center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height:18px;
+}
+.setTable .colorTd em{
+	display:block;
+	text-align:center;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height:18px;
+}
+.setTable .frm_checkbox_label, .setTable .frm_checkbox_label .icon_checkbox{
+	margin:0;
+}
+
+.main_body .setTable th i{
+	background: url(http://style1.buyinchina.com/img/bic.gif) no-repeat 0 -364px;
+	display: inline-block;
+    height: 8px;
+    overflow: hidden;
+    width: 7px;
+	margin-left:4px;
+	margin-top:3px;
+}
+.main_body .setTable th a:hover, .main_body .setTable .current{
+	color:#44b549;
+}
+.main_body .setTable th a:hover i, .main_body .setTable .current i{
+	background-position:right -364px;
+}
+.main_body .setTable th .order-desc i{
+	background-position:right -364px!important;
+}
+.main_body .setTable th .order-desc a:hover i{
+	background-position:right -364px!important;
+}
+.main_body .setTable th .order-asc i{
+	background-position:right -356px!important;
+}
+.main_body .setTable th .order-asc a:hover i{
+	background-position:right -356px!important;
+}
+
+
+
+/*entity_shop_footer*/
+
+.entity_shop_footer{
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width: 100%;
+	background:#FFF;
+	border-top: 1px solid #e7e7eb;
+}
+.entity_shop_footer .cont{
+	margin: 0 auto;
+	width: 100%;
+	min-width: 930px;
+	position: relative;
+	min-height:50px;
+}
+.entity_shop_footer .main_cont{
+	padding-left: 198px;
+}
+.entity_shop_footer .menu_cont{
+	margin-top:8px;
+	float:left;
+}
+.entity_shop_footer .menu{
+	line-height:32px;
+	border-right: 1px solid #BBB;
+	padding-right:20px;
+}
+.entity_shop_footer .setup_menu{
+	padding-left: 40px;
+	background-image: url('http://account.poso2o.com/style/img/setup_menu_icon.png');
+	background-repeat: no-repeat;
+	background-size: 20px auto;
+	background-position: 12px center;
+}
+.entity_shop_footer .full_screen_menu{
+	padding-left: 40px;
+	background-image: url('http://account.poso2o.com/style/img/full_screen_menu_icon.png');
+	background-repeat: no-repeat;
+	background-size: 20px auto;
+	background-position: 12px center;
+}
+.entity_shop_footer .examine_menu i{
+	padding-left: 40px;
+	background-image: url('http://account.poso2o.com/style/img/examine_menu_icon.png');
+	background-repeat: no-repeat;
+	background-size: 20px auto;
+	background-position: 12px center;
+	border-right: 1px solid #FFF;
+}
+.entity_shop_footer .examine_menu em{
+	color:#d81e06;
+	padding-right:4px;
+}
+.entity_shop_footer .assign_btn{
+	float:right;
+	margin-right: 8px;
+	margin-top:6px;
+	line-height: 35px;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	padding:0 40px;
+	
+	color: #FFF;
+	background: #44b549;
+}
+@-webkit-keyframes twinkling{
+  0% {
+      opacity: 0; 
+  }
+  100% {
+      opacity: 1; 
+  }
+}
+ 
+#shop_news_icon {
+    -webkit-animation: twinkling 1s infinite ease-in-out; 
+}
+
+/* *
+ * 店铺详情
+ */
+.shop_info_area{
+	margin-left: 208px;
+	
+	border: 1px solid #e7e7eb;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	
+	position:relative;
+	
+}
+.shop_info_area .shop_info_area_close{
+	color:#44b549;
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:101;
+	padding-right: 50px;
+	line-height:50px;
+	background-image: url('http://account.poso2o.com/style/img/close_icon.png');
+	background-repeat: no-repeat;
+	background-size: 24px auto;
+	background-position: center center;
+}
+.shop_info_area .shop_info_area_close:hover{
+	opacity: 0.5; 
+}
+.shop_info_area .shop_head {
+	position:relative;
+	border-bottom: 1px solid #e7e7eb;
+}
+.shop_info_area .shop_head .pic {
+	position:absolute;
+	left:10px;
+	top:7px;
+	float: left;
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+	background-color: #f8f8f8;
+	background-image: url('http://account.poso2o.com/style/img/user222_222.jpg');
+	background-repeat: no-repeat;
+	background-size: 60px auto;
+	background-position: center center;
+}
+.shop_info_area .shop_head .shop_name{
+	display:block;
+	clear:both;
+	font-size:16px;
+	padding-top:10px;
+	padding-left:80px;
+}
+.shop_info_area .shop_head .shop_other{
+	display:block;
+	clear:both;
+	padding-left:80px;
+	color:#9e9e9e;
+	padding-top:6px;
+	padding-bottom:12px;
+}
+.shop_info_area .shop_head .shop_other li{
+	float:left;
+	min-width:190px;
+}
+.shop_info_area .shop_head .shop_other span{
+	color:#5e5e5e;
+}
+.shop_info_area .shop_details_text{
+	display:block;
+	clear:both;
+	color:#9e9e9e;
+	padding-top:12px;
+	padding-left:12px;
+	padding-bottom:12px;
+	border-bottom: 1px solid #e7e7eb;
+}
+.shop_info_area .shop_details_text li{
+	float:left;
+	min-width:190px;
+}
+.shop_info_area .shop_details_text span{
+	color:#5e5e5e;
+}
+.shop_info_area .shop_news{
+	display:block;
+	clear:both;
+}
+.shop_info_area .shop_news .head{
+	display:block;
+	clear:both;
+	color:#9e9e9e;
+	padding-top:12px;
+	padding-left:12px;
+	padding-bottom:12px;
+	
+	padding-left: 40px;
+	background-image: url('http://account.poso2o.com/style/img/examine_menu_icon_b.png');
+	background-repeat: no-repeat;
+	background-size: 20px auto;
+	background-position: 12px center;
+}
+.shop_info_area .shop_news ul{
+	border-top: 1px solid #e7e7eb;
+	display:block;
+	padding-top:8px;
+	padding-bottom:8px;
+	padding-left:10px;
+	line-height:32px;
+}
+.shop_info_area .shop_news li{
+	display:block;
+}
+.shop_info_area .shop_news span{
+	color:#5e5e5e;
+}
+.shop_info_area .shop_news em{
+	color:#44b549;
+	float:right;
+	
+	padding-right: 24px;
+	background-image: url('http://account.poso2o.com/style/img/down_icon.png');
+	background-repeat: no-repeat;
+	background-size: 24px auto;
+	background-position: 24px center;
+}
+.shop_info_area .shop_news_up em{
+	background-image: url('http://account.poso2o.com/style/img/up_icon.png');
+}
+
+.shop_nav_list{
+	display:block;
+	clear:both;
+	background:#f8f8f8 url(http://www.poso2o.com/WeChat/style/img/navList_bg.jpg) repeat-X 0 44px;
+	min-height:45px;
+}
+.shop_nav_list ul{
+	display:block;
+	border-top:1px solid #e7e7eb;
+}
+.shop_nav_list li{
+	float:left;
+	padding-left:10px;
+	padding-right:10px;
+	min-width:150px;
+	border-right:1px solid #e7e7eb;
+	text-align:center;
+}
+.shop_nav_list li a{
+	display:block;
+	line-height:43px;
+	font-size:16px;
+}
+.shop_nav_list li em{
+	font-size:14px;
+}
+.shop_nav_list li.current{
+	background:#FFF;
+	border-bottom:1px solid #FFF;
+}
+.shop_nav_list li.current a{
+	color: #44b549;
+}
+
+.shop_service{
+	display:block;
+	clear:both;
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.shop_service .items{
+	margin:0 auto;
+}
+.shop_service .item{
+	float:left;
+	width:350px;
+	margin-left:10px;
+	margin-top:10px;
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:30px;
+	border:1px solid #e7e7eb;
+	text-align:center;
+}
+.shop_service .item span{
+	display:block;
+	text-align:left;
+}
+.shop_service .item .name{
+	float:left;
+	font-size:16px;
+	padding-bottom:8px;
+	text-align:left;
+}
+.shop_service .item .state{
+	float:right;
+	padding-bottom:8px;
+	text-align:right;
+}
+.shop_service .item i{
+	display:block;
+	margin:0 auto;
+	width:130px;
+	height:130px;
+	margin-top:10px;
+	margin-bottom:10px;
+	background-repeat: no-repeat;
+	background-size: 130px auto;
+	background-position: center center;
+}
+.shop_service .code_payment_item i{
+	background-image: url('http://account.poso2o.com/style/img/code_payment_icon.png');
+}
+.shop_service .wx_shop_item i{
+	background-image: url('http://account.poso2o.com/style/img/wx_shop_icon.png');
+}
+.shop_service .small_program_item i{
+	background-image: url('http://account.poso2o.com/style/img/small_program_icon.png');
+}
+.shop_service .distribution_item i{
+	background-image: url('http://account.poso2o.com/style/img/distribution_icon.png');
+}
+
+.shop_service .item i{
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: url("data:image/svg+xml;utf8,#grayscale");
+	filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+	-webkit-filter: grayscale(1);
+}
+.shop_service .item.current i{
+	filter:none;
+	-webkit-filter: none;
+	-moz-filter: none;
+	-ms-filter: none;
+	-o-filter: none;
+	filter: none;
+	filter:none;
+	-webkit-filter:none;
+}
+.shop_service .item.current{
+	border:1px solid #44b549;
+}
+.shop_service .item.current span{
+	color:#5E5E5E;
+}
+.shop_service .item.current .name{
+	color:#44b549;
+}
+
+.shop_service .btn_item{
+	margin:0 auto;
+	margin-top:16px;
+}
+.shop_service .btn_item .btn{
+	line-height: 35px;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	padding:10px 40px;
+}
+
+.shop_service .btn_item .btn_default{
+}
+
+.shop_service .btn_item .btn_primary{
+	color: #FFF;
+	background: #44b549;
+}
+
+.shop_service .list{
+	margin:0 auto;
+	width:280px;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+.shop_service .list .li{
+	float:left;
+	padding-left:10px;
+	padding-right:10px;
+	line-height:18px;
+	border-right: 1px solid #DDD;
+}
+
+.shop_service .list .li em{
+	display:block;
+}
+
+
+
+
+.shop_aptitude .pub-wrap {
+  position: relative;
+  padding: 30px 100px;
+  border-radius: 6px;
+}
+.shop_aptitude .pub-process {
+  position: relative;
+  height: 35px;
+  margin-left: 35px;
+  font-size: 0;
+  color: #fff;
+}
+
+.shop_aptitude .pub-process:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  width: 99%;
+  height: 4px;
+  content: "";
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  background-color: #d9d9d9;
+}
+
+.shop_aptitude .pub-process li {
+  position: relative;
+  z-index: 5;
+  display: inline-block;
+  width: 25%;
+  height: 35px;
+  font-size: .875rem;
+}
+
+.shop_aptitude .pub-process li:first-child {
+  width: 35px;
+  margin-left: -35px;
+}
+
+.shop_aptitude .pub-process .ball {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 7;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  content: "";
+  text-align: center;
+  border-radius: 50%;
+  background-color: #d9d9d9;
+  
+	background-repeat: no-repeat;
+	background-size: 35px auto;
+	background-position: center center;
+  
+}
+
+.shop_aptitude .pub-process .active .ball {
+  background-color: #44b549;
+}
+
+.shop_aptitude .pub-process .active_ok .ball{
+	background-image: url('http://account.poso2o.com/style/img/shop_aptitude_ok_icon.png');
+    background-color: #FFF;
+}
+.shop_aptitude .pub-process .active_error .ball{
+	background-image: url('http://account.poso2o.com/style/img/shop_aptitude_error_icon.png');
+    background-color: #FFF;
+}
+
+.shop_aptitude .pub-process .ball_text {
+  position: absolute;
+  bottom: -30px;
+  right: -44px;
+  z-index: 7;
+  width: 120px;
+  height: 35px;
+  line-height: 35px;
+  color:#5E5E5E;
+  content: "";
+  text-align: center;
+}
+
+.shop_aptitude .pub-process .active + .active:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 6;
+  width: 100%;
+  height: 4px;
+  content: "";
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  background-color: #44b549;
+}
+
+.shop_aptitude .process-3 li {
+  width: 50%;
+}
+
+.shop_aptitude .process-5 li {
+  width: 25%;
+}
+
+/* flex ver */
+.shop_aptitude .pub-process-flex {
+  display: -webkit-box;
+}
+.shop_aptitude .pub-process-flex li {
+  display: list-item;
+  -webkit-box-flex: 1;
+  width: auto;
+}
+.shop_aptitude .pub-process-flex li:first-child {
+  width: 35px;
+  margin-left: -35px;
+  -webkit-box-flex: 0;
+}
+
+.shop_aptitude .items{
+	margin:20px;
+	border:1px solid #e7e7eb;
+	position:relative;
+	min-height:500px;
+}
+
+.shop_aptitude .items .imgs{
+	float:left;
+	width:400px;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.shop_aptitude .items .imgs_cont{
+	border-right:1px solid #e7e7eb;
+	
+	height:500px;
+	width:400px;
+	display: table-cell;  
+	vertical-align:middle;  
+	/*设置水平居中*/  
+	text-align:center;  
+	/* 针对IE的Hack */  
+	*display: block;  
+	*font-size: 500px;/*约为高度的0.873，200*0.873 约为175*/  
+	*font-family:Arial;/*防止非utf-8引起的hack失效问题，如gbk编码*/  
+	
+}
+.shop_aptitude .items .imgs img{
+	max-height:500px;
+	max-width:400px;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.shop_aptitude .texts{
+	display:block;
+	padding-left:400px;
+	padding-bottom:100px;
+}
+
+.shop_aptitude .texts .title{
+	font-size:16px;
+	line-height:48px;
+	border-bottom:1px solid #e7e7eb;
+	padding-left:14px;
+	color:#5e5e5e;
+	margin-bottom:10px;
+}
+
+.shop_aptitude .texts .title i{
+	font-size:16px;
+	line-height:48px;
+	border-left:4px solid #44b549;
+	padding-right:4px;
+}
+
+.shop_aptitude .texts p{
+	color:#9e9e9e;
+	padding-left:14px;
+	line-height:30px;
+	
+}
+.shop_aptitude .texts p span{
+	color:#5e5e5e;
+	
+}
+
+.shop_aptitude .btn_item{
+	position:absolute;
+	bottom:10px;
+	right:0;
+}
+.shop_aptitude .btn_item .btn{
+	float:right;
+	margin-right: 8px;
+	margin-top:6px;
+	line-height: 35px;
+	border: 1px solid #DDD;
+	border-radius: 4px;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	text-transform: uppercase;
+	vertical-align: middle;
+	padding:0 40px;
+}
+
+.shop_aptitude .btn_item .btn_default{
+}
+
+.shop_aptitude .btn_item .btn_primary{
+	color: #FFF;
+	background: #44b549;
+}
+
+.shop_aptitude .btn_item .btn_default{
+	
+}
+
+
+
+
+
+
