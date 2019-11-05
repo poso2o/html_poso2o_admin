@@ -120,6 +120,9 @@ function windowHeight() {
     });
 }
 
+/**
+ * 对浏览器窗口调整大小进行计数
+ */
 $(window).resize(function () {
     windowHeight();
 })
