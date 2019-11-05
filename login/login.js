@@ -13,7 +13,6 @@ var Page = {
     },
     //登录接口
     toLogin: function () {
-
         var self = this;
         var templateData = {};
         templateData.user_id = ($("input[name='login_username']").val()).replace(/\s+/g, "");
@@ -73,7 +72,6 @@ var Page = {
                 //window.location.href = "/entity_shop/entity_shop.jsp";
             }
         );
-
     },
     init: function () {
 
@@ -109,7 +107,7 @@ $("input[name='login_password']").live('keyup', function (event) {
 /* *
  * 调整窗口绝对居中
  */
-function windowHeightR() {
+function windowHeight() {
     var windowHeight = $(window).height(); //浏览器当前窗口可视区域高度
     var contentHeight = $(".layadmin-user-login-main").height();
     var top = 20;
@@ -123,14 +121,14 @@ function windowHeightR() {
 }
 
 $(window).resize(function () {
-    windowHeightR();
+    windowHeight();
 })
 /* *
  * 设置缓存值
  */
 $(function () {
     //调整窗口大小
-    windowHeightR();
+    windowHeight();
     var loginname = POS.getCookie("poso2o_admin_user_id");
     if (loginname) {
         $("input[name='login_username']").val(loginname); //用户名
